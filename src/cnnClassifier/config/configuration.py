@@ -7,7 +7,7 @@ from cnnClassifier.entity.config_entity import (DataIngestionConfig,
                                                 EvaluationConfig)
 
 
-
+ 
 class ConfigurationManager:
     def __init__(
         self,
