@@ -182,3 +182,228 @@ x==========x]
 [2025-08-20 03:32:01,616: INFO: main: >>>>>> stage Evaluation stage completed <<<<<<
 
 x==========x]
+[2025-08-20 11:50:42,437: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.0.114:8080]
+[2025-08-20 11:50:42,437: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2025-08-20 11:50:42,438: INFO: _internal:  * Restarting with stat]
+[2025-08-20 11:50:44,071: WARNING: _internal:  * Debugger is active!]
+[2025-08-20 11:50:44,080: INFO: _internal:  * Debugger PIN: 346-628-412]
+[2025-08-20 11:50:53,201: INFO: _internal: 127.0.0.1 - - [20/Aug/2025 11:50:53] "GET / HTTP/1.1" 200 -]
+[2025-08-20 11:51:06,846: INFO: _internal: 127.0.0.1 - - [20/Aug/2025 11:51:06] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -]
+[2025-08-20 11:51:20,260: INFO: _internal: 127.0.0.1 - - [20/Aug/2025 11:51:20] "GET / HTTP/1.1" 200 -]
+[2025-08-20 11:51:48,495: INFO: _internal: 127.0.0.1 - - [20/Aug/2025 11:51:48] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -]
+[2025-08-20 11:58:20,883: INFO: _internal: 127.0.0.1 - - [20/Aug/2025 11:58:20] "GET / HTTP/1.1" 200 -]
+[2025-08-20 12:02:53,684: INFO: _internal:  * Detected change in '/Users/davidibrahim/Programming/krishnaikcourse/chestdiseasepred/src/cnnClassifier/pipeline/predict.py', reloading]
+[2025-08-20 12:02:54,006: INFO: _internal:  * Restarting with stat]
+[2025-08-20 12:11:14,950: INFO: _client: HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"]
+[2025-08-20 12:11:14,953: INFO: helpers: Accessing as DavidIbrahimG]
+[2025-08-20 12:11:15,298: INFO: _client: HTTP Request: GET https://dagshub.com/api/v1/repos/DavidIbrahimG/chestdiseasedetection "HTTP/1.1 200 OK"]
+[2025-08-20 12:11:15,505: INFO: _client: HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"]
+[2025-08-20 12:11:15,506: INFO: helpers: Initialized MLflow to track repo "DavidIbrahimG/chestdiseasedetection"]
+[2025-08-20 12:11:15,506: INFO: helpers: Repository DavidIbrahimG/chestdiseasedetection initialized!]
+[2025-08-20 12:11:15,506: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2025-08-20 12:11:15,508: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-08-20 12:11:15,508: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-20 12:11:15,508: INFO: common: created directory at: artifacts]
+[2025-08-20 12:11:15,508: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-08-20 12:11:15,509: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1z0mreUtRmR-P-magILsDR3T7M6IkGXtY/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-08-20 12:11:22,778: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1z0mreUtRmR-P-magILsDR3T7M6IkGXtY/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-08-20 12:11:22,989: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2025-08-20 12:11:22,989: INFO: main: *******************]
+[2025-08-20 12:11:22,989: INFO: main: >>>>>> stage Prepare base model started <<<<<<]
+[2025-08-20 12:11:22,990: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-08-20 12:11:22,990: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-20 12:11:22,991: INFO: common: created directory at: artifacts]
+[2025-08-20 12:11:22,991: INFO: common: created directory at: artifacts/prepare_base_model]
+[2025-08-20 12:11:23,211: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2025-08-20 12:11:23,246: WARNING: optimizer: At this time, the v2.11+ optimizer `tf.keras.optimizers.SGD` runs slowly on M1/M2 Macs, please use the legacy Keras optimizer instead, located at `tf.keras.optimizers.legacy.SGD`.]
+[2025-08-20 12:11:23,274: INFO: main: >>>>>> stage Prepare base model completed <<<<<<
+
+x==========x]
+[2025-08-20 12:11:23,274: INFO: main: *******************]
+[2025-08-20 12:11:23,274: INFO: main: >>>>>> stage Training started <<<<<<]
+[2025-08-20 12:11:23,275: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-08-20 12:11:23,275: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-20 12:11:23,275: INFO: common: created directory at: artifacts]
+[2025-08-20 12:11:23,275: INFO: common: created directory at: artifacts/training]
+[2025-08-20 12:11:23,355: WARNING: optimizer: At this time, the v2.11+ optimizer `tf.keras.optimizers.SGD` runs slowly on M1/M2 Macs, please use the legacy Keras optimizer instead, located at `tf.keras.optimizers.legacy.SGD`.]
+[2025-08-20 12:15:45,171: INFO: main: >>>>>> stage Training completed <<<<<<
+
+x==========x]
+[2025-08-20 12:15:45,171: INFO: main: *******************]
+[2025-08-20 12:15:45,171: INFO: main: >>>>>> stage Evaluation stage started <<<<<<]
+[2025-08-20 12:15:45,172: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-08-20 12:15:45,173: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-20 12:15:45,173: INFO: common: created directory at: artifacts]
+[2025-08-20 12:15:45,336: WARNING: optimizer: At this time, the v2.11+ optimizer `tf.keras.optimizers.SGD` runs slowly on M1/M2 Macs, please use the legacy Keras optimizer instead, located at `tf.keras.optimizers.legacy.SGD`.]
+[2025-08-20 12:15:54,059: INFO: common: json file saved at: scores.json]
+[2025-08-20 12:15:56,770: ERROR: main: INTERNAL_ERROR: Response: {'error': 'unsupported endpoint, please contact support@dagshub.com'}]
+Traceback (most recent call last):
+  File "/Users/davidibrahim/Programming/krishnaikcourse/chestdiseasepred/main.py", line 52, in <module>
+    model_evalution.main()
+  File "/Users/davidibrahim/Programming/krishnaikcourse/chestdiseasepred/src/cnnClassifier/pipeline/stage_04_evaluation.py", line 21, in main
+    evaluation.log_into_mlflow()
+  File "/Users/davidibrahim/Programming/krishnaikcourse/chestdiseasepred/src/cnnClassifier/components/evaluation.py", line 76, in log_into_mlflow
+    mlflow.keras.log_model(self.model, "model", registered_model_name="VGG16Model")
+  File "/Users/davidibrahim/miniconda3/envs/chestpred/lib/python3.10/site-packages/mlflow/tensorflow/__init__.py", line 229, in log_model
+    return Model.log(
+  File "/Users/davidibrahim/miniconda3/envs/chestpred/lib/python3.10/site-packages/mlflow/models/model.py", line 1166, in log
+    model = _create_logged_model(
+  File "/Users/davidibrahim/miniconda3/envs/chestpred/lib/python3.10/site-packages/mlflow/tracking/fluent.py", line 2305, in _create_logged_model
+    return MlflowClient()._create_logged_model(
+  File "/Users/davidibrahim/miniconda3/envs/chestpred/lib/python3.10/site-packages/mlflow/tracking/client.py", line 5394, in _create_logged_model
+    return self._tracking_client.create_logged_model(
+  File "/Users/davidibrahim/miniconda3/envs/chestpred/lib/python3.10/site-packages/mlflow/telemetry/track.py", line 27, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/davidibrahim/miniconda3/envs/chestpred/lib/python3.10/site-packages/mlflow/tracking/_tracking_service/client.py", line 847, in create_logged_model
+    return self.store.create_logged_model(
+  File "/Users/davidibrahim/miniconda3/envs/chestpred/lib/python3.10/site-packages/mlflow/store/tracking/rest_store.py", line 824, in create_logged_model
+    response_proto = self._call_endpoint(CreateLoggedModel, req_body)
+  File "/Users/davidibrahim/miniconda3/envs/chestpred/lib/python3.10/site-packages/mlflow/store/tracking/rest_store.py", line 134, in _call_endpoint
+    return call_endpoint(
+  File "/Users/davidibrahim/miniconda3/envs/chestpred/lib/python3.10/site-packages/mlflow/utils/rest_utils.py", line 554, in call_endpoint
+    response = verify_rest_response(response, endpoint)
+  File "/Users/davidibrahim/miniconda3/envs/chestpred/lib/python3.10/site-packages/mlflow/utils/rest_utils.py", line 308, in verify_rest_response
+    raise RestException(json.loads(response.text))
+mlflow.exceptions.RestException: INTERNAL_ERROR: Response: {'error': 'unsupported endpoint, please contact support@dagshub.com'}
+[2025-08-20 12:24:03,192: INFO: stage_01_data_ingestion: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2025-08-20 12:24:03,192: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-08-20 12:24:03,194: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-20 12:24:03,194: INFO: common: created directory at: artifacts]
+[2025-08-20 12:24:03,194: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-08-20 12:24:03,194: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1z0mreUtRmR-P-magILsDR3T7M6IkGXtY/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-08-20 12:24:09,664: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1z0mreUtRmR-P-magILsDR3T7M6IkGXtY/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-08-20 12:24:09,865: INFO: stage_01_data_ingestion: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2025-08-20 12:30:28,502: INFO: stage_01_data_ingestion: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2025-08-20 12:30:28,504: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-08-20 12:30:28,505: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-20 12:30:28,505: INFO: common: created directory at: artifacts]
+[2025-08-20 12:30:28,506: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-08-20 12:30:28,506: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1z0mreUtRmR-P-magILsDR3T7M6IkGXtY/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-08-20 12:30:32,276: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1z0mreUtRmR-P-magILsDR3T7M6IkGXtY/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-08-20 12:30:32,491: INFO: stage_01_data_ingestion: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2025-08-20 12:30:34,787: INFO: stage_02_prepare_base_model: *******************]
+[2025-08-20 12:30:34,787: INFO: stage_02_prepare_base_model: >>>>>> stage Prepare base model started <<<<<<]
+[2025-08-20 12:30:34,788: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-08-20 12:30:34,788: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-20 12:30:34,788: INFO: common: created directory at: artifacts]
+[2025-08-20 12:30:34,788: INFO: common: created directory at: artifacts/prepare_base_model]
+[2025-08-20 12:30:34,988: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2025-08-20 12:30:35,025: WARNING: optimizer: At this time, the v2.11+ optimizer `tf.keras.optimizers.SGD` runs slowly on M1/M2 Macs, please use the legacy Keras optimizer instead, located at `tf.keras.optimizers.legacy.SGD`.]
+[2025-08-20 12:30:35,058: INFO: stage_02_prepare_base_model: >>>>>> stage Prepare base model completed <<<<<<
+
+x==========x]
+[2025-08-20 12:30:58,104: INFO: stage_02_prepare_base_model: *******************]
+[2025-08-20 12:30:58,104: INFO: stage_02_prepare_base_model: >>>>>> stage Prepare base model started <<<<<<]
+[2025-08-20 12:30:58,105: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-08-20 12:30:58,105: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-20 12:30:58,105: INFO: common: created directory at: artifacts]
+[2025-08-20 12:30:58,105: INFO: common: created directory at: artifacts/prepare_base_model]
+[2025-08-20 12:30:58,283: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2025-08-20 12:30:58,321: WARNING: optimizer: At this time, the v2.11+ optimizer `tf.keras.optimizers.SGD` runs slowly on M1/M2 Macs, please use the legacy Keras optimizer instead, located at `tf.keras.optimizers.legacy.SGD`.]
+[2025-08-20 12:30:58,354: INFO: stage_02_prepare_base_model: >>>>>> stage Prepare base model completed <<<<<<
+
+x==========x]
+[2025-08-20 12:31:00,358: INFO: stage_03_model_trainer: *******************]
+[2025-08-20 12:31:00,358: INFO: stage_03_model_trainer: >>>>>> stage Training started <<<<<<]
+[2025-08-20 12:31:00,359: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-08-20 12:31:00,360: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-20 12:31:00,360: INFO: common: created directory at: artifacts]
+[2025-08-20 12:31:00,360: INFO: common: created directory at: artifacts/training]
+[2025-08-20 12:31:00,472: WARNING: optimizer: At this time, the v2.11+ optimizer `tf.keras.optimizers.SGD` runs slowly on M1/M2 Macs, please use the legacy Keras optimizer instead, located at `tf.keras.optimizers.legacy.SGD`.]
+[2025-08-20 12:35:22,347: INFO: stage_03_model_trainer: >>>>>> stage Training completed <<<<<<
+
+x==========x]
+[2025-08-20 12:35:59,242: INFO: stage_03_model_trainer: *******************]
+[2025-08-20 12:35:59,242: INFO: stage_03_model_trainer: >>>>>> stage Training started <<<<<<]
+[2025-08-20 12:35:59,243: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-08-20 12:35:59,243: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-20 12:35:59,243: INFO: common: created directory at: artifacts]
+[2025-08-20 12:35:59,243: INFO: common: created directory at: artifacts/training]
+[2025-08-20 12:35:59,351: WARNING: optimizer: At this time, the v2.11+ optimizer `tf.keras.optimizers.SGD` runs slowly on M1/M2 Macs, please use the legacy Keras optimizer instead, located at `tf.keras.optimizers.legacy.SGD`.]
+[2025-08-20 12:40:37,177: INFO: stage_03_model_trainer: >>>>>> stage Training completed <<<<<<
+
+x==========x]
+[2025-08-20 12:40:39,942: INFO: _client: HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"]
+[2025-08-20 12:40:39,945: INFO: helpers: Accessing as DavidIbrahimG]
+[2025-08-20 12:40:40,204: INFO: _client: HTTP Request: GET https://dagshub.com/api/v1/repos/DavidIbrahimG/chestdiseasedetection "HTTP/1.1 200 OK"]
+[2025-08-20 12:40:40,396: INFO: _client: HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"]
+[2025-08-20 12:40:40,401: INFO: helpers: Initialized MLflow to track repo "DavidIbrahimG/chestdiseasedetection"]
+[2025-08-20 12:40:40,402: INFO: helpers: Repository DavidIbrahimG/chestdiseasedetection initialized!]
+[2025-08-20 12:40:40,402: INFO: stage_04_evaluation: *******************]
+[2025-08-20 12:40:40,402: INFO: stage_04_evaluation: >>>>>> stage Evaluation stage started <<<<<<]
+[2025-08-20 12:40:40,405: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-08-20 12:40:40,406: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-20 12:40:40,407: INFO: common: created directory at: artifacts]
+[2025-08-20 12:40:40,562: WARNING: optimizer: At this time, the v2.11+ optimizer `tf.keras.optimizers.SGD` runs slowly on M1/M2 Macs, please use the legacy Keras optimizer instead, located at `tf.keras.optimizers.legacy.SGD`.]
+[2025-08-20 12:40:49,733: INFO: common: json file saved at: scores.json]
+[2025-08-20 12:40:49,733: INFO: stage_04_evaluation: >>>>>> stage Evaluation stage completed <<<<<<
+
+x==========x]
+[2025-08-20 12:59:41,278: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.0.114:8080]
+[2025-08-20 12:59:41,278: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2025-08-20 12:59:41,278: INFO: _internal:  * Restarting with stat]
+[2025-08-20 12:59:42,939: WARNING: _internal:  * Debugger is active!]
+[2025-08-20 12:59:42,947: INFO: _internal:  * Debugger PIN: 346-628-412]
+[2025-08-20 12:59:49,103: INFO: _internal: 127.0.0.1 - - [20/Aug/2025 12:59:49] "GET / HTTP/1.1" 200 -]
+[2025-08-20 12:59:50,473: INFO: _internal: 127.0.0.1 - - [20/Aug/2025 12:59:50] "GET / HTTP/1.1" 200 -]
+[2025-08-20 12:59:51,495: INFO: _internal: 127.0.0.1 - - [20/Aug/2025 12:59:51] "GET / HTTP/1.1" 200 -]
+[2025-08-20 12:59:58,914: WARNING: optimizer: At this time, the v2.11+ optimizer `tf.keras.optimizers.SGD` runs slowly on M1/M2 Macs, please use the legacy Keras optimizer instead, located at `tf.keras.optimizers.legacy.SGD`.]
+[2025-08-20 12:59:59,068: INFO: _internal: 127.0.0.1 - - [20/Aug/2025 12:59:59] "POST /predict HTTP/1.1" 200 -]
+[2025-08-20 13:01:25,476: INFO: _internal: 127.0.0.1 - - [20/Aug/2025 13:01:25] "GET / HTTP/1.1" 200 -]
+[2025-08-20 13:07:39,528: WARNING: optimizer: At this time, the v2.11+ optimizer `tf.keras.optimizers.SGD` runs slowly on M1/M2 Macs, please use the legacy Keras optimizer instead, located at `tf.keras.optimizers.legacy.SGD`.]
+[2025-08-20 13:07:39,652: INFO: _internal: 127.0.0.1 - - [20/Aug/2025 13:07:39] "POST /predict HTTP/1.1" 200 -]
+[2025-08-20 13:08:35,359: WARNING: optimizer: At this time, the v2.11+ optimizer `tf.keras.optimizers.SGD` runs slowly on M1/M2 Macs, please use the legacy Keras optimizer instead, located at `tf.keras.optimizers.legacy.SGD`.]
+[2025-08-20 13:08:35,482: INFO: _internal: 127.0.0.1 - - [20/Aug/2025 13:08:35] "POST /predict HTTP/1.1" 200 -]
+[2025-08-20 13:42:14,504: INFO: stage_03_model_trainer: *******************]
+[2025-08-20 13:42:14,504: INFO: stage_03_model_trainer: >>>>>> stage Training started <<<<<<]
+[2025-08-20 13:42:14,505: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-08-20 13:42:14,505: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-20 13:42:14,505: INFO: common: created directory at: artifacts]
+[2025-08-20 13:42:14,505: INFO: common: created directory at: artifacts/training]
+[2025-08-20 13:42:14,625: WARNING: optimizer: At this time, the v2.11+ optimizer `tf.keras.optimizers.SGD` runs slowly on M1/M2 Macs, please use the legacy Keras optimizer instead, located at `tf.keras.optimizers.legacy.SGD`.]
+[2025-08-20 13:51:11,226: INFO: stage_03_model_trainer: >>>>>> stage Training completed <<<<<<
+
+x==========x]
+[2025-08-20 13:51:14,347: INFO: _client: HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"]
+[2025-08-20 13:51:14,352: INFO: helpers: Accessing as DavidIbrahimG]
+[2025-08-20 13:51:14,659: INFO: _client: HTTP Request: GET https://dagshub.com/api/v1/repos/DavidIbrahimG/chestdiseasedetection "HTTP/1.1 200 OK"]
+[2025-08-20 13:51:14,855: INFO: _client: HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"]
+[2025-08-20 13:51:14,859: INFO: helpers: Initialized MLflow to track repo "DavidIbrahimG/chestdiseasedetection"]
+[2025-08-20 13:51:14,860: INFO: helpers: Repository DavidIbrahimG/chestdiseasedetection initialized!]
+[2025-08-20 13:51:14,860: INFO: stage_04_evaluation: *******************]
+[2025-08-20 13:51:14,860: INFO: stage_04_evaluation: >>>>>> stage Evaluation stage started <<<<<<]
+[2025-08-20 13:51:14,863: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-08-20 13:51:14,865: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-20 13:51:14,865: INFO: common: created directory at: artifacts]
+[2025-08-20 13:51:15,010: WARNING: optimizer: At this time, the v2.11+ optimizer `tf.keras.optimizers.SGD` runs slowly on M1/M2 Macs, please use the legacy Keras optimizer instead, located at `tf.keras.optimizers.legacy.SGD`.]
+[2025-08-20 13:51:23,515: INFO: common: json file saved at: scores.json]
+[2025-08-20 13:51:23,516: INFO: stage_04_evaluation: >>>>>> stage Evaluation stage completed <<<<<<
+
+x==========x]
+[2025-08-20 13:54:44,056: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.0.114:8080]
+[2025-08-20 13:54:44,057: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2025-08-20 13:54:44,057: INFO: _internal:  * Restarting with stat]
+[2025-08-20 13:54:45,755: WARNING: _internal:  * Debugger is active!]
+[2025-08-20 13:54:45,762: INFO: _internal:  * Debugger PIN: 346-628-412]
+[2025-08-20 13:54:49,680: INFO: _internal: 127.0.0.1 - - [20/Aug/2025 13:54:49] "GET / HTTP/1.1" 200 -]
+[2025-08-20 13:56:32,341: WARNING: optimizer: At this time, the v2.11+ optimizer `tf.keras.optimizers.SGD` runs slowly on M1/M2 Macs, please use the legacy Keras optimizer instead, located at `tf.keras.optimizers.legacy.SGD`.]
+[2025-08-20 13:56:32,536: INFO: _internal: 127.0.0.1 - - [20/Aug/2025 13:56:32] "POST /predict HTTP/1.1" 200 -]
+[2025-08-20 13:56:44,450: WARNING: optimizer: At this time, the v2.11+ optimizer `tf.keras.optimizers.SGD` runs slowly on M1/M2 Macs, please use the legacy Keras optimizer instead, located at `tf.keras.optimizers.legacy.SGD`.]
+[2025-08-20 13:56:44,581: INFO: _internal: 127.0.0.1 - - [20/Aug/2025 13:56:44] "POST /predict HTTP/1.1" 200 -]
+[2025-08-20 13:56:53,995: WARNING: optimizer: At this time, the v2.11+ optimizer `tf.keras.optimizers.SGD` runs slowly on M1/M2 Macs, please use the legacy Keras optimizer instead, located at `tf.keras.optimizers.legacy.SGD`.]
+[2025-08-20 13:56:54,119: INFO: _internal: 127.0.0.1 - - [20/Aug/2025 13:56:54] "POST /predict HTTP/1.1" 200 -]
